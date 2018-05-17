@@ -15,7 +15,7 @@ public class ClienteService {
 	@Autowired
 	private ClienteRepository repo;
 	//pegar a categoria por código
-	public Cliente buscar(Integer id) {
+	public Cliente find(Integer id) {
 		//objeto contaniner que vai carregar o objeto que for passado do tipo <Cliente>
 		//encapsular se objeto está encapsulado ou não. Java 8 para eliminar o NullPointerException
 		Optional<Cliente> obj =  repo.findById(id);

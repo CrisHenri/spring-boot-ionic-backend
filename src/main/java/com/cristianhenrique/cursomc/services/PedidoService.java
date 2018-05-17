@@ -15,7 +15,7 @@ public class PedidoService {
 	@Autowired
 	private PedidoRepository repo;
 	//pegar a categoria por código
-	public Pedido buscar(Integer id) {
+	public Pedido find(Integer id) {
 		//objeto contaniner que vai carregar o objeto que for passado do tipo <Pedido>
 		//encapsular se objeto está encapsulado ou não. Java 8 para eliminar o NullPointerException
 		Optional<Pedido> obj =  repo.findById(id);

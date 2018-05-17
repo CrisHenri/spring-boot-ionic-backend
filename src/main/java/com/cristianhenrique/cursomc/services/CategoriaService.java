@@ -15,7 +15,7 @@ public class CategoriaService {
 	@Autowired
 	private CategoriaRepository repo;
 	//pegar a categoria por código
-	public Categoria buscar(Integer id) {
+	public Categoria find(Integer id) {
 		//objeto contaniner que vai carregar o objeto que for passado do tipo <Categoria>
 		//encapsular se objeto está encapsulado ou não. Java 8 para eliminar o NullPointerException
 		Optional<Categoria> obj =  repo.findById(id);
@@ -31,5 +31,8 @@ public class CategoriaService {
 		obj.setId(null);
 		return repo.save(obj);
 	}
-
+	public Categoria update (Categoria obj) {
+		find(obj.getId());
+		return repo.save(obj);
+	}
 }
