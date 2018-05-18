@@ -1,15 +1,23 @@
 package com.cristianhenrique.cursomc.resources.exception;
 
-public class StandardError {
+import java.io.Serializable;
+
+public class StandardError implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	
+	
 	private Integer Status;
 	private String msg;
 	private Long timeStamp;
 	
 	
 	
-	public StandardError() {
-		super();
-	}
+//	public StandardError() {
+//		super();
+//	}
 
 
 
