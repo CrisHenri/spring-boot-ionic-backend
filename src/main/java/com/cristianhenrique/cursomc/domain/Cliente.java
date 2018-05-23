@@ -36,7 +36,7 @@ public class Cliente implements Serializable{
 	private String cpfOuCnpj;
 	private Integer tipo;
 	
-	
+	//Quando tiver uma comando para apagar em cascata utilizar o comando CASCADE
 	@OneToMany(mappedBy="cliente", cascade =  CascadeType.ALL)
 	private List<Endereco> enderecos = new ArrayList<>();
 	
